@@ -1,0 +1,119 @@
+.headermain{
+    background-image: url("https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png");
+}
+.headermain #logo{
+    width: 95px;
+}
+.headtop #headitem #menu{
+    display: none;
+    width: 25px;
+    margin-left: 3px;
+}
+
+.headermain .headtop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.headtop #headitem{
+    display: flex;
+    align-items: center;
+}
+.headermain .headtop #logo{
+    margin: 15px;
+}
+.headermain #addpost{
+    background-color: #1bb76e;
+    color: white;
+    border: none;
+    padding: 7px 10px;
+   font-weight: bold;
+   width: 110px;
+}
+.headermain #addpost img{
+    vertical-align: middle;
+}
+.headtop #inputtop{
+    background-color: rgba(82, 80, 80, 0.26);
+    color: red;
+    display: flex;
+    width: 50%;
+    margin: auto 10%;
+}
+.headtop #inputtop input{
+    padding: 10px;
+    background-color: rgba(117, 117, 117, 0.295);
+    color: white;
+    width: 100%;
+    border: none;
+    font-weight: 500;
+}
+.headtop #inputtop button{
+    background-color: rgba(49, 49, 49, 0.26);
+   border: none;
+}
+.headtop #options{
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.headtop #options #icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+.headtop #options #adfree{
+    background-color: #6432f9;
+    color: white;
+    vertical-align: middle;
+    padding : 10px;
+    font-weight: bold;
+    border: none;
+    width: 100px;
+}
+.headtop #options #icon{
+    margin : auto 7px;
+}
+.headtop #options #user{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+.headtop #options #user{
+    vertical-align: middle;
+}
+.headtop #options #user img{
+   width: 30px;
+   border-radius: 50%;
+   margin-left: 8px;
+}
+@media(max-width:508px){
+    .headtop #headitem #menu{
+        display: block;
+    }
+}
+@media only screen and (max-width : 500px){
+    .headtop #headitem #addpost{
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 600px){
+    .headtop #inputtop{
+        display: none;
+    }
+    .headtop #options #asfree{
+        display: none;
+    }
+}
+@media only screen and (max-width : 800px){
+    .headtop #options #icons{
+        display: none;
+    }
+    .headtop #options #user p{
+        display: none;
+    }
+}
