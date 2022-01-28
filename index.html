@@ -1,67 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Imgur</title>
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/navbar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-<header id="head" class="headermain"></header>
-<container class="container">
-    <div class="contMain">
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header id="head" class="headermain"></header>
+    <container class="container">
+      <div class="contMain">
         <div id="itemslist">
-            <div id="item">
-                <img id="contimg" src="https://avatars.githubusercontent.com/u/24973089?v=4" alt="dog">
-                <p>May I Introduce you all too Beauregard</p>
-                <div id="contActivity">
-                    <span>
-                        <i class="fas fa-arrow-up"></i>
-                        <span>200</span>
-                        <i class="fas fa-arrow-down"></i>
-                    </span>
-                    <span>
-                        <i class="far fa-comment-alt"></i>
-                        <span>17</span>
-                    </span>
-                    <span>
-                        <i class="fas fa-eye"></i>
-                        <span>300</span>
-                    </span>    
-                </div>
+          <div id="item">
+            <img
+              id="contimg"
+              src="https://avatars.githubusercontent.com/u/24973089?v=4"
+              alt="dog"
+            />
+            <p>May I Introduce you all too Beauregard</p>
+            <div id="contActivity">
+              <span>
+                <i class="fas fa-arrow-up"></i>
+                <span>200</span>
+                <i class="fas fa-arrow-down"></i>
+              </span>
+              <span>
+                <i class="far fa-comment-alt"></i>
+                <span>17</span>
+              </span>
+              <span>
+                <i class="fas fa-eye"></i>
+                <span>300</span>
+              </span>
             </div>
-            
-            <div id="item">
-                <img style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://i.imgur.com/NJ9Au8K.jpeg" width="258" height="253">
-                <p>May I Introduce you all too Beauregard</p>
-                <div id="contActivity">
-                    <span>
-                        <i class="fas fa-arrow-up"></i>
-                        <span>200</span>
-                        <i class="fas fa-arrow-down"></i>
-                    </span>
-                    <span>
-                        <i class="far fa-comment-alt"></i>
-                        <span>17</span>
-                    </span>
-                    <span>
-                        <i class="fas fa-eye"></i>
-                        <span>300</span>
-                    </span>    
-                </div>
+          </div>
+
+          <div id="item">
+            <img
+              id="contimg"
+              src="https://i.imgur.com/michc6m.jpeg"
+              alt="dog"
+            />
+            <p>May I Introduce you all too Beauregard</p>
+            <div id="contActivity">
+              <span>
+                <i class="fas fa-arrow-up"></i>
+                <span>200</span>
+                <i class="fas fa-arrow-down"></i>
+              </span>
+              <span>
+                <i class="far fa-comment-alt"></i>
+                <span>17</span>
+              </span>
+              <span>
+                <i class="fas fa-eye"></i>
+                <span>300</span>
+              </span>
             </div>
+          </div>
+          <div id="item">
+            <img
+              id="contimg"
+              src="https://i.imgur.com/michc6m.jpeg"
+              alt="dog"
+            />
+            <p>May I Introduce you all too Beauregard</p>
+            <div id="contActivity">
+              <span>
+                <i class="fas fa-arrow-up"></i>
+                <span>200</span>
+                <i class="fas fa-arrow-down"></i>
+              </span>
+              <span>
+                <i class="far fa-comment-alt"></i>
+                <span>17</span>
+              </span>
+              <span>
+                <i class="fas fa-eye"></i>
+                <span>300</span>
+              </span>
+            </div>
+          </div>
         </div>
-    </div>
-</container>
-    
-</body>
+      </div>
+    </container>
+  </body>
 </html>
 <script type="module">
-    import navbar from "./components/navbar.js"
-    const header = document.getElementById("head")
-    header.innerHTML = navbar()
-
+  import navbar from "./components/navbar.js";
+  const header = document.getElementById("head");
+  header.innerHTML = navbar();
 </script>
