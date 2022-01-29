@@ -19,7 +19,9 @@
 .contMain #itemslist {
   margin: auto 7%;
   display: grid;
-  grid-template-columns: repeat(4, 25%);
+  /* grid-template-rows: repeat(2, 50%); */
+  /* grid-auto-flow: row dense; */
+  grid-template-columns: repeat(5, 20%);
   grid-gap: 15px;
 }
 .contMain #itemslist {
