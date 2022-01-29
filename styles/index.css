@@ -27,7 +27,7 @@
 .contMain #itemslist {
   color: white;
 }
-.contMain .item img {
+.contMain #contimg {
   width: 100%;
   max-width: 300px;
 }
