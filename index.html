@@ -20,7 +20,7 @@
     <container class="container">
       <div class="contMain">
         <div id="itemslist">
-          <div id="item">
+          <!-- <div id="item">
             <img
               id="contimg"
               src="https://avatars.githubusercontent.com/u/24973089?v=4"
@@ -42,61 +42,36 @@
                 <span>300</span>
               </span>
             </div>
-          </div>
-
-          <div id="item">
-            <img
-              id="contimg"
-              src="https://i.imgur.com/michc6m.jpeg"
-              alt="dog"
-            />
-            <p>May I Introduce you all too Beauregard</p>
-            <div id="contActivity">
-              <span>
-                <i class="fas fa-arrow-up"></i>
-                <span>200</span>
-                <i class="fas fa-arrow-down"></i>
-              </span>
-              <span>
-                <i class="far fa-comment-alt"></i>
-                <span>17</span>
-              </span>
-              <span>
-                <i class="fas fa-eye"></i>
-                <span>300</span>
-              </span>
-            </div>
-          </div>
-          <div id="item">
-            <img
-              id="contimg"
-              src="https://i.imgur.com/michc6m.jpeg"
-              alt="dog"
-            />
-            <p>May I Introduce you all too Beauregard</p>
-            <div id="contActivity">
-              <span>
-                <i class="fas fa-arrow-up"></i>
-                <span>200</span>
-                <i class="fas fa-arrow-down"></i>
-              </span>
-              <span>
-                <i class="far fa-comment-alt"></i>
-                <span>17</span>
-              </span>
-              <span>
-                <i class="fas fa-eye"></i>
-                <span>300</span>
-              </span>
-            </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </container>
   </body>
+  <script src="./components/container.js"></script>
 </html>
 <script type="module">
   import navbar from "./components/navbar.js";
   const header = document.getElementById("head");
   header.innerHTML = navbar();
+
+  // import data from "./components/data.js";
+  var itemlist = document.getElementById("itemslist");
+  fetch("https://api.pexels.com/v1/curated/?page=3")
+    .then((response) => response.json())
+    .then((result) => {
+      result.photos.map((e) => {
+        let itemdiv = document.createElement("div");
+        let itemimg = document.createElement("img");
+        let itemp = document.createElement("p");
+        let act = document.createElement("div");
+
+        act.classList.add("contActivity");
+        itemdiv.classList.add("item");
+
+        itemimg.src = e.src.medium;
+        itemdiv.append(itemimg);
+        itemlist.append(itemdiv);
+      });
+    })
+    .catch((error) => console.log("error", error));
 </script>
