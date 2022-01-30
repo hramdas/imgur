@@ -1,9 +1,10 @@
-function navbar(){
-    return `<div class="headtop">
+function navbar() {
+  return `<div class="headtop">
     <span id="headitem">
         
         <img id="menu" src="files/menubar.jpg" alt="">
-        <img id="logo" src="files/logo.png" alt="imgur" />
+        <a src="/"><img id="logo" src="files/logo.png" alt="imgur" /> </a>
+        
         <button id="addpost"><img src="https://s.imgur.com/desktop-assets/desktop-assets/icon-new-post.13ab64f9f36ad8f25ae3544b350e2ae1.svg" /> New post</button>
     </span>
     <span id="inputtop">
@@ -28,7 +29,7 @@ function navbar(){
             <img src="/files/user.png" alt="">
         </div>
     </span>
-</div>`
+</div>`;
 }
 
-export default navbar
+export default navbar;

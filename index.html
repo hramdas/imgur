@@ -15,10 +15,11 @@
       referrerpolicy="no-referrer"
     />
     <script src="index.js"></script>
-    <script src="components\data.js"></script>
+  
   </head>
   <body>
     <header id="head" class="headermain"></header>
+    <button onClick="topFunction()" id="gotop" title="Go to top">Top</button>
     <container class="container">
       <div class="contMain">
         <div id="itemslist">
@@ -47,12 +48,29 @@
                 </div>
             </div> -->
         </div>
+        <div class="loader"></div>
       </div>
     </container>
+
+    <script type="module">
+      import navbar from "./components/navbar.js";
+      const header = document.getElementById("head");
+      header.innerHTML = navbar();
+
+
+      //go to top
+      var topbtn = document.getElementById("gotop");
+      window.onscroll = function () {
+        scrollFun();
+      };
+      function scrollFun() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          topbtn.style.display = "block";
+        } else {
+          topbtn.style.display = "none";
+        }
+      } 
+    </script>
   </body>
 </html>
-<script type="module">
-    import navbar from "./components/navbar.js";
-    const header = document.getElementById("head");
-    header.innerHTML = navbar();
-</script>
+

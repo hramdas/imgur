@@ -2,22 +2,19 @@ var page = 1;
 var size = 8;
 
 var myHeaders = new Headers();
-myHeaders.append(
-  "Authorization",
-  ""
-);
+
+myHeaders.append("Authorization", "");
 
 function getdata() {
   fetch(`https://api.pexels.com/v1/curated/?page=${page}&per_page=${size}`, {
     method: "GET",
-    headers: myHeaders
+    headers: myHeaders,
   })
     .then((response) => response.json())
     .then((result) => {
       result.photos.map((e) => {
-        var itemslist = document.getElementById("itemslist");
-        console.log(e);
-        var datamap = `<div id="item">
+        let itemslist = document.getElementById("itemslist");
+        let datamap = `<div id="item">
                         <img
                         id="contimg"
                         src="${e.src.medium}"
@@ -35,5 +32,31 @@ function getdata() {
       });
     })
     .catch((error) => console.log("error", error));
+  // const loader = ``;
+  // let itemslist = document.getElementById("itemslist");
+  // itemslist.insertAdjacentHTML("afterend", loader);
 }
 getdata();
+
+const showData = () => {
+  setTimeout(() => {
+    page++;
+    getdata();
+  }, 300);
+};
+
+window.addEventListener("scroll", () => {
+  const { scrollHeight, scrollTop, clientHeight } = document.documentElement;
+
+  if (scrollTop + clientHeight >= scrollHeight) {
+    console.log("At bottom");
+
+    showData();
+  }
+});
+
+//on button click
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
