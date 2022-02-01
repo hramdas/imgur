@@ -8,7 +8,7 @@ function navbar() {
         <button id="addpost"><img src="https://s.imgur.com/desktop-assets/desktop-assets/icon-new-post.13ab64f9f36ad8f25ae3544b350e2ae1.svg" /> New post</button>
     </span>
     <span id="inputtop">
-        <input type="text" placeholder="Images, #tags, @users oh my!" />
+        <input id="input" oninput="debounce(main, 1000)" type="text" placeholder="Images, #tags, @users oh my!" />
         <button><img src="https://s.imgur.com/desktop-assets/desktop-assets/icon-search.8d0f9b564a4659d48d8eca38b968a7f2.svg" /></button>
     </span>
     <span id="options">
