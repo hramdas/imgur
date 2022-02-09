@@ -20,7 +20,6 @@ function main() {
   txt = document.getElementById("input").value;
 
   if (txt.length > 3) {
-    // api = `https://api.pexels.com/v1/search/?query=${txt}`;
     let itemslist = document.getElementById("itemslist");
     itemslist.innerHTML = null;
     page = 1;
@@ -30,9 +29,9 @@ function main() {
 // var api = `https://api.pexels.com/v1/curated/?page=${page}&per_page=${size}`;
 
 function getdata() {
-  console.log(txt);
   if (txt) {
     var api = `https://api.pexels.com/v1/search/?page=${page}&per_page=${size}&query=${txt}`;
+    console.log(txt);
   } else
     var api = `https://api.pexels.com/v1/curated/?page=${page}&per_page=${size}`;
 
@@ -42,7 +41,6 @@ function getdata() {
   })
     .then((response) => response.json())
     .then((result) => {
-      console.log(api);
       result.photos.map((e) => {
         let itemslist = document.getElementById("itemslist");
         let datamap = `<div id="item">
